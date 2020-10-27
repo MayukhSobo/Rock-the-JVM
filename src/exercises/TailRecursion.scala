@@ -33,9 +33,9 @@ object TailRecursion extends App {
     _isPrime(2, acc = false)
   }
 
-  def fibonacci(n: Int): Int = {
+  def fibonacci(n: Int): BigInt = {
     @tailrec
-    def _fibonacci(n: Int, prev: Int, acc: Int): Int = {
+    def _fibonacci(n: Int, prev: BigInt, acc: BigInt): BigInt = {
       if (n <= 2) acc
       else _fibonacci(n - 1, acc, prev + acc)
     }
@@ -44,6 +44,6 @@ object TailRecursion extends App {
   }
 
   //  println(concat("Mayukh ", 10))
-  println(isPrime(1943532342))
-  //  println(fibonacci(6)) // 1 1 2 3 5 8
+//  println(isPrime(1943532342))
+    println(fibonacci(600)) // 1 1 2 3 5 8
 }
